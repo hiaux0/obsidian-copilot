@@ -50,3 +50,7 @@ This document outlines the relevant files and highlights the location of the `ve
 * `src/search/vectorStoreManager.ts`
   * This file contains the `VectorStoreManager` class, which manages the vector store.
   * The `indexVaultToVectorStore`, `clearIndex`, `garbageCollectVectorStore`, `getIndexedFiles`, `isIndexEmpty`, `hasIndex`, and other functions provide various operations for the vector store.
+
+## Vector Database Location
+
+The vector database is stored in the user's vault directory under the `copilot-index` prefix. The exact location is determined by the `baseDir` and `identifier` used in the `ChunkedStorage` class. For example, if the `baseDir` is set to the root of the vault and the `identifier` is `default`, the database files will be stored in the root directory with names like `copilot-index-chunk-default-0.json`, `copilot-index-chunk-default-1.json`, and so on.
